@@ -6,7 +6,7 @@ pipeline{
                                 git 'https://github.com/Huster65/test.git'
                         }
                 }
-		 stage('Clone'){
+		 stage('Build'){
                         steps {
                                 withDockerRegistry(credentialsId: 'docker-hub', url: 'https://index.docker.io/v1/') { 
 				sh 'sudo docker build -t minhnhatbk65/nodejs-v10 .'
